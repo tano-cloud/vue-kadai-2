@@ -11,22 +11,10 @@
           <td>-性別-</td>
         </tr>
         <tr>
-          <label
-            ><input
-              type="radio"
-              name="sex"
-              value="man"
-              v-model="sex"
-            />男性</label
-          >
-          <label
-            ><input
-              type="radio"
-              name="sex"
-              value="woman"
-              v-model="sex"
-            />女性</label
-          >
+          <label>
+            <input type="radio" name="sex" value="man" v-model="sex"/>男性</label>
+          <label>
+            <input type="radio" name="sex" value="woman" v-model="sex"/>女性</label>
         </tr>
         <br />
         <tr>
@@ -61,20 +49,19 @@
 <script>
 export default {
   //elは指定しない
-  name: "BasicInfo",
+  name: 'BasicInfo',
   data: function() {
-    return{
-    list: [],}},
-
+    return{ list: [], }
+  },
   created() {
     const Year = new Date().getFullYear()+1;
-    for (let i = 1900; i < Year; i++) {
+    for (let i = 1910; i < Year; i++) {
       //1900年4月1日だと、明治33/4/1
-      let japanCalender = new Date(i,4,1).toLocaleDateString("ja-JP-u-ca-japanese", { era: "long" });
+      const japanCalender = new Date(i, 4, 1).toLocaleDateString("ja-JP-u-ca-japanese", { era: "long" });
        //明治33/4/1から、明治33/4/1だけ取り出す
-      let japanCalenderYear = japanCalender.match(/(.*)\/(\d+)\/(\d+)/)[1];
-      //1900(明治33)
-      let optionMyBornYear = i+'年'+'('+japanCalenderYear+')';
+      const japanCalenderYear = japanCalender.match(/(.*)\/(\d+)\/(\d+)/)[1];
+      //1900年(明治33)
+      const optionMyBornYear = i + '年' + '(' + japanCalenderYear + ')';
       this.list.unshift(optionMyBornYear);}
   },
   computed: {
@@ -82,26 +69,30 @@ export default {
       get() {
         return this.$store.state.sex;},
       set(value) {
-        this.$store.commit("updateSex", value);},
+        this.$store.commit('updateSex', value);},
     },
     year: {
       get() {
-        return this.$store.state.year;},
+        return this.$store.state.year;
+        },
       set(value) {
-        this.$store.commit("updateYear", value);},
+        this.$store.commit('updateYear', value);
+        },
     },
     month: {
       get() {
-        return this.$store.state.month;},
+        return this.$store.state.month;
+        },
       set(value) {
-        this.$store.commit("updateMonth", value);
+        this.$store.commit('updateMonth', value);
       },
     },
     day: {
       get() {
-        return this.$store.state.day;},
+        return this.$store.state.day;
+        },
       set(value) {
-        this.$store.commit("updateDay", value);
+        this.$store.commit('updateDay', value);
       },
     },
   },
