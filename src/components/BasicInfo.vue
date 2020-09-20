@@ -12,9 +12,9 @@
         </tr>
         <tr>
           <label>
-            <input type="radio" name="sex" value="man" v-model="sex"/>男性</label>
+            <input type="radio" name="sex" value="男性" v-model="sex"/>男性</label>
           <label>
-            <input type="radio" name="sex" value="woman" v-model="sex"/>女性</label>
+            <input type="radio" name="sex" value="女性" v-model="sex"/>女性</label>
         </tr>
         <br />
         <tr>
@@ -22,7 +22,7 @@
         </tr>
         <tr>
           <select name="year" v-model="year" class="bornyear">
-            <option v-for="(year,index) of list" :key="index" :value="year" >
+            <option v-for="(year, index) of list" :key="index" :value="year" >
               {{ year }}
             </option>
           </select>
