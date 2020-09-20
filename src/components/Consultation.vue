@@ -18,11 +18,11 @@
       <br />
     </table>
 
-        <button>
+    <button>
       <router-link to="/Survey">前へ戻る ></router-link>
     </button>
     <button>
-      <router-link to="/">次へ進む ></router-link>
+      <router-link to="/Summarize">次へ進む ></router-link>
     </button>
 
     <router-view />

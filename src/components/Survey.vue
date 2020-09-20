@@ -12,22 +12,8 @@
           <td>現在生命保険に加入されていますか？</td>
         </tr>
         <tr>
-          <label
-            ><input
-              type="radio"
-              name="lifeInsurance"
-              value="true"
-              v-model="lifeInsurance"
-            />はい</label
-          >
-          <label
-            ><input
-              type="radio"
-              name="lifeInsurance"
-              value="false"
-              v-model="lifeInsurance"
-            />いいえ</label
-          >
+          <label><input type="radio" name="lifeInsurance" value="はい" v-model="lifeInsurance"/>はい</label>
+          <label><input type="radio" name="lifeInsurance" value="いいえ" v-model="lifeInsurance"/>いいえ</label>
         </tr>
       </tbody>
       <br />
@@ -40,22 +26,8 @@
         </tr>
         <tr>
           <td>
-            <label
-              ><input
-                type="radio"
-                value="true"
-                name="hospitalWithIn3months"
-                v-model="hospitalWithIn3months"
-              />はい</label
-            >
-            <label
-              ><input
-                type="radio"
-                value="false"
-                name="hospitalWithIn3months"
-                v-model="hospitalWithIn3months"
-              />いいえ</label
-            >
+            <label><input type="radio" value="はい" name="hospitalWithIn3months" v-model="hospitalWithIn3months"/>はい</label>
+            <label><input type="radio" value="いいえ" name="hospitalWithIn3months" v-model="hospitalWithIn3months"/>いいえ</label>
           </td>
         </tr>
       </tbody>
@@ -69,22 +41,8 @@
         </tr>
         <tr>
           <td>
-            <label
-              ><input
-                type="radio"
-                value="true"
-                name="hospitalWithIn5years"
-                v-model="hospitalWithIn5years"
-              />はい</label
-            >
-            <label
-              ><input
-                type="radio"
-                value="false"
-                name="hospitalWithIn5years"
-                v-model="hospitalWithIn5years"
-              />いいえ</label
-            >
+            <label><input type="radio" value="はい" name="hospitalWithIn5years" v-model="hospitalWithIn5years"/>はい</label>
+            <label><input type="radio" value="いいえ" name="hospitalWithIn5years" v-model="hospitalWithIn5years"/>いいえ</label>
           </td>
         </tr>
       </tbody>
